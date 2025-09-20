@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Landing Page</title>
+    <link rel="icon" type="image/png" href="ChatGPT Image Sep 20, 2025, 08_12_04 AM.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary: #3a7bd5;
+            --secondary: #00d2ff;
+            --dark: #2c3e50;
+            --light: #f8f9fa;
+            --gray: #718096;
+            --accent: #ff6b6b;
+        }
+        
+        body {
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 150px 0 100px;
+            background: linear-gradient(135deg, rgba(58, 123, 213, 0.9) 0%, rgba(0, 210, 255, 0.9) 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: white;
+            color: var(--primary);
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 2px solid white;
+        }
+        
+        .btn:hover {
+            background: transparent;
+            color: white;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: white;
+            margin-left: 15px;
+        }
+        
+        .btn-outline:hover {
+            background: white;
+            color: var(--primary);
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 100px 0;
+            background: var(--light);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(58, 123, 213, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--primary);
+            font-size: 28px;
+        }
+        
+        .feature-card h3 {
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+        
+        .feature-card p {
+            color: var(--gray);
+        }
+        
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background: white;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--gray);
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 100px 0;
+            background: var(--light);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+        
+        .author-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            color: var(--gray);
+            font-size: 14px;
+        }
+        
+        /* CTA Section */
+        .cta {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-column p {
+            opacity: 0.7;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: white;
+            opacity: 0.7;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        
+        .footer-links a:hover {
+            opacity: 1;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: var(--primary);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.7;
+            font-size: 14px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: white;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: left 0.3s;
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+            }
+            
+            .hero {
+                padding: 120px 0 80px;
+            }
+            
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .btn {
+                display: block;
+                margin: 10px auto;
+                width: 80%;
+            }
+            
+            .btn-outline {
+                margin-left: 0;
+            }
+        }
+
+        .Pages{
+            padding: 100px 0;
+            background: #f8f9fa;
+        }
+
+        .Pages-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .Pages-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card{
+            background: rgb(213, 191, 191);  /* full card background */
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  padding-right: 50px;
+        }
+
+        .card1{
+            background: rgb(213, 191, 191);  /* full card background */
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+        }
+
+        .card2{
+            background: rgb(213, 191, 191);  /* full card background */
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+        }
+
+        .card3{
+            background: rgb(213, 191, 191);  /* full card background */
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+        }
+
+        .card4{
+            background: rgb(213, 191, 191);  /* full card background */
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+        }
+
+        .card5{
+            background: rgb(160, 133, 133);  /* full card background */
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div id="home">
+        <div class="container">
+            <nav class="navbar">
+                <table>
+                <th><a href="#" class="logo"><img src="ChatGPT Image Sep 20, 2025, 08_12_04 AM.png" alt="" style="width: 100px;"></a></th>
+                <th><h2>SiteCrafter</h2></th>
+                </table>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#feature">Features</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="Pages">
+        <div class="container">
+            <div class="section-title">
+                <h2  style="padding-bottom: 10px; padding-top: 55px;">Pages</h2>
+                <div style="float: right;">
+                <img src="ChatGPT Image Sep 20, 2025, 08_12_04 AM.png" alt="" style="width: 400px; float: right; border: 2px solid rgb(95, 80, 80); border-radius: 50%;">
+                <h3 style="padding-top: 50px;">SiteCrafter</h3>
+            </div>
+                <table style="padding-bottom: 10px;">
+                    <tr>
+                <th style="padding-right: 50px;"><a href="SiteCrafter - Currecy Calculator.html"><i style="width: 200px; border: 2px solid silver; border-radius: 15px; height: 200px; padding-left: 50px; padding-top: 65px; padding-bottom: 50px; padding-right: 50px; float: left;" class="fas fa-exchange-alt fa-4x"class="card" style="padding-left: 20px; padding-top: 20px; padding-bottom: 20px; padding-right: 20px;"></i></th></a>
+                <th style="padding-right: 50px;"><a href="SiteCrafter - Loan Calculator.html"><i style="width: 200px; border: 2px solid silver; border-radius: 15px; height: 200px; padding-left: 50px; padding-top: 65px; padding-bottom: 50px; padding-right: 50px; float: center;" class="fas fa-calculator fa-4x"class="card1"></i></th></a>
+                <th style="padding-right: 50px;"><a href="SiteCrafter - QR Code.html"><i style="width: 200px; border: 2px solid silver; border-radius: 15px; height: 200px; padding-left: 50px; padding-top: 65px; padding-bottom: 50px; padding-right: 50px; float: right;" class="fas fa-qrcode fa-4x"class="card2"></i></a></th>
+              </tr>
+              <tr>
+                <td>Currency Exchange</td>
+                <td>Loan Calculator</td>
+                <td>QR Code Generator</td>
+              </tr>
+            </table>
+            <table style="padding-top: 2px;">
+                <tr>
+                <th style="padding-right: 50px;"><a href="SiteCrafter - Unit Converter.html"><i style="width: 200px; border: 2px solid silver; border-radius: 15px; height: 200px; padding-left: 50px; padding-top: 65px; padding-bottom: 50px; padding-right: 50px; float: left;" class="fas fa-exchange-alt fa-4x"class="card3">U</i></a></th>
+                <th style="padding-right: 50px;"><a href="SiteCrafter - Short Link Generator.html"><i style="width: 200px; border: 2px solid silver; border-radius: 15px; height: 200px; padding-left: 50px; padding-top: 65px; padding-bottom: 50px; padding-right: 50px; float: center;" class="fas fa-link fa-4x"class="card4"></i></a></th>
+                <th style="padding-right: 50px;"><a href="SiteCrafter - BMI Calculator.html"><i style="width: 200px; border: 2px solid silver; border-radius: 15px; height: 200px; padding-left: 50px; padding-top: 65px; padding-bottom: 50px; padding-right: 50px; float: right;" class="fas fa-weight-scale fa-4x"class="card5"></i></a></th>
+                </tr>
+                <tr>
+                <td>Unit Converter</td>
+                <td>Short Link Generator</td>
+                <td>BMI Calculator</td>
+                </tr>
+            </table>
+            </div>
+        </div>
+    </section>
+</div>
+
+    <!-- Features Section -->
+    <div id="feature">
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Us</h2>
+                <p>We provide innovative solutions tailored to your specific needs</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Innovative Solutions</h3>
+                    <p>We create cutting-edge solutions that help your business stand out from the competition.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Expert Team</h3>
+                    <p>Our team of professionals has years of experience in delivering high-quality results.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Fast Delivery</h3>
+                    <p>We understand the importance of time and deliver projects on schedule without compromising quality.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Our Company</h2>
+                    <p>We are a passionate team of designers and developers committed to creating exceptional digital experiences. With years of industry experience, we've helped countless businesses achieve their goals through innovative solutions.</p>
+                    <p>Our approach combines creativity, technical expertise, and strategic thinking to deliver results that make a real impact.</p>
+                    <a href="#" class="btn" style="background: var(--primary); color: white;">Learn More About Us</a>
+                </div>
+                <div class="about-image">
+                    <!-- Replace with your image -->
+                    <img src="ChatGPT Image Sep 20, 2025, 08_12_04 AM.png" alt="About us">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Clients Say</h2>
+                <p>Hear from businesses that have transformed with our solutions</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Working with this team was a game-changer for our business. Their innovative approach helped us increase conversions by 40% in just three months."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <!-- Replace with client image -->
+                            <img src="https://placehold.co/50x50/3a7bd5/ffffff?text=C" alt="Client">
+                        </div>
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>CEO, TechSolutions</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "The attention to detail and professionalism exceeded our expectations. They delivered on time and within budget, and the results speak for themselves."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <!-- Replace with client image -->
+                            <img src="https://placehold.co/50x50/3a7bd5/ffffff?text=C" alt="Client">
+                        </div>
+                        <div class="author-info">
+                            <h4>Michael Chen</h4>
+                            <p>Marketing Director, InnovateCo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "I've worked with many agencies over the years, but none have delivered the level of strategic thinking and execution that this team provides."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <!-- Replace with client image -->
+                            <img src="https://placehold.co/50x50/3a7bd5/ffffff?text=C" alt="Client">
+                        </div>
+                        <div class="author-info">
+                            <h4>Emma Rodriguez</h4>
+                            <p>Product Manager, GrowthLabs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Transform Your Business?</h2>
+            <p>Get in touch with us today to discuss how we can help you achieve your goals with our innovative solutions.</p>
+            <a href="#" class="btn">Contact Us Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>YourBrand</h3>
+                    <p>Creating innovative digital solutions that drive growth and engagement for businesses worldwide.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Web Design</a></li>
+                        <li><a href="#">Development</a></li>
+                        <li><a href="#">Digital Marketing</a></li>
+                        <li><a href="#">Branding</a></li>
+                        <li><a href="#">SEO Optimization</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Business Ave, Suite 100</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@yourbrand.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 YourBrand. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
